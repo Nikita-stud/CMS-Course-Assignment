@@ -2,6 +2,7 @@ import {url} from "./constants.js";
 // import {catchAndDisplay} from "./ui/catchAndDisplay.js";
 import { handleClick } from "./helper/handleClick.js";
 import { fetchItems } from "./api/fetchItems.js";
+import { fetchThumbnails } from "./api/fetchThumbnails.js";
 
 const container = document.querySelector("#jackets__container");
 
@@ -14,6 +15,7 @@ async function getJackets(){
     container.innerHTML = "";
     
     fetchItems(items);
+    fetchThumbnails(items)
                             
     const ctaAdd = document.querySelectorAll("#add");
     ctaAdd.forEach(function(button){

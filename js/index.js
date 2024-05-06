@@ -1,7 +1,7 @@
 import {url} from "./constants.js";
 // import {catchAndDisplay} from "./ui/catchAndDisplay.js";
 import { handleClick } from "./helper/handleClick.js";
-import { fetchJackets } from "./api/fetchJackets.js";
+import { fetchItems } from "./api/fetchItems.js";
 
 const container = document.querySelector("#jackets__container");
 
@@ -9,11 +9,11 @@ async function getJackets(){
   try{
     const fetched = await fetch(url)
     const results = await fetched.json()
-    const jackets = results;
+    const items = results;
 
     container.innerHTML = "";
     
-    fetchJackets(jackets);
+    fetchItems(items);
                             
     const ctaAdd = document.querySelectorAll("#add");
     ctaAdd.forEach(function(button){

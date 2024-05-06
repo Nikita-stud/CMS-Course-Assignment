@@ -1,27 +1,27 @@
-export function fetchItems(items){
+export function fetchJackets(jackets){
   const container = document.querySelector("#jackets__container");
 
-  items.forEach(function(item){
+  jackets.forEach(function(jacket){
 
-    // let discount = "";
-    // let textDecoration = ""
+    let discount = "";
+    let textDecoration = ""
 
-    // if(item.price > item.discountedPrice){
-    //   discount = item.discountedPrice;
-    //   textDecoration ="line-through";
-    // }
+    if(jacket.price > jacket.discountedPrice){
+      discount = jacket.discountedPrice;
+      textDecoration ="line-through";
+    }
 
 
     container.innerHTML += `<div class="horizontal-jackets__container">
                               <div class="jackets-text__container">
-                                <a href="details.html?id=${item.id}">
-                                  <img src="${item.image}" class="jacket-img" alt="${item.title}">
-                                  <h3 class="jackets-title">${item.title}</h3>
-                                  <p class="jackets-text">${item.description}</p>
-                                  <p class="jackets-price"><span style="text-decoration:${textDecoration}">${item.price} kr.</span> <span class ="jackets-discount-price">${discount}</span></p>
+                                <a href="details.html?id=${jacket.id}">
+                                  <img src="${jacket.image}" class="jacket-img" alt="${jacket.title}">
+                                  <h3 class="jackets-title">${jacket.title}</h3>
+                                  <p class="jackets-text">${jacket.description}</p>
+                                  <p class="jackets-price"><span style="text-decoration:${textDecoration}">${jacket.price} kr.</span> <span class ="jackets-discount-price">${discount}</span></p>
                                 </a>
                                 </div>
-                                <button href="bag.html" id="add" class="cta-add" data-id=${item.id}>Add to bag</button>
+                                <button href="bag.html" id="add" class="cta-add" data-id=${jacket.id}>Add to bag</button>
                             </div>`;
   });
 }

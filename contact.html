@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&family=Montserrat:wght@100&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/fontawesome-free-6.3.0-web/css/all.css">
+  <script defer src="js/helper/validateContactForm.js"></script>
   <script defer src="js/ui/hotjar.js"></script>
 </head>
 
@@ -20,7 +21,9 @@
 <body class="body-small">
   <header class="relative-header">
     <section class="dark-header">
-      <p>Sale up to 20%</p>
+      <a href="deals.html" class="dark-header-text">
+        <p>Sale up to 20%</p>
+      </a>
     </section>
     <section class="lower-header">
       <label for="hamburger-menu"><i class="fa-sharp fa-solid fa-bars"></i><span class="span__empty">!!!Deleted!!!</span></label>
@@ -37,47 +40,57 @@
           </ul>
         </nav>
       <!-- Some Icons from Font Awesome and other websites did not work for some reason, had to use img from Figma, wrote description for blind people to understand the images -->
-        <div class="icons">
-          <a href="#"><img src="/pictures/Icons-profile.png" alt="Your Profile"></a>
-          <a href="bag.html"><img src="/pictures/Icons-bag.png" alt="My Bag"></a>
-          <a href="#"><img src="/pictures/Icons-search.png" alt="Search"></a>
-        </div>
-      </section>
+      <div class="icons">
+        <a href="#"><i class="fa-solid fa-user"><span class="span__empty">!!!Deleted!!!</span></i></a>
+        <a href="bag.html"><i class="fa-solid fa-bag-shopping" id="bagIcon"><span class="span__empty">!!!Deleted!!!</span></i></a>
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i><span class="span__empty">!!!Deleted!!!</span></a>
+      </div>
+    </section>
   </header>
 
 
   <main>
-    <section class="question">
-      <h1 class="h1-grey">Got any questions?</h1>
-      <div class="line"></div>
+    <section>
+      <div class="breadcrumbs__container">
+        <ul>
+          <li class="breadcrumbs-house"><a href="/"><i class="fa-solid fa-house"><span class="span__empty">!!!Deleted!!!</span></i></a></li>
+          <li><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="details.html">Contact Page</a></li>
+        </ul>
+      </div>
     </section>
 
     <section class="contact-flex">
-      <section class="map">
-        <h2 class="h1-grey">Our location</h2>
-        <div class="line"></div>
-        <p class="p-grey"><i class="fa-solid fa-location-dot"></i> Grey Wedels Plass 5, 0151 Oslo</p>
-        <img src="/pictures/Location-img.jpg" alt="Location of rainydays shop">
-      </section>
-      <section class="contact-field">
-        <h2 class="h1-grey">Contact Our Team</h2>
-        <div class="line"></div>
-          <form action="#" method="post">
-            <div class="input-section">
-              <label for="fname">First name <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-              <input type="text" id="fname" name="first-name" placeholder="Please enter" required>
-              <label for="lname">Last name <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-              <input type="text" id="lname" name="last-name" placeholder="Please enter" required>
-              <label for="mail">Email address <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-              <input type="email" id="mail" name="email" placeholder="Please enter" required>
-              <label for="subject">Subject <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-              <input type="text" id="subject" name="subject" placeholder="What is it about?" required>
-              <label for="message">Message <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-              <textarea name="message" id="message" cols="230" rows="3" placeholder="How may we be of help?"></textarea>
+
+        <div class="map">
+          <h2>Our location</h2>
+          <img src="/pictures/Location-img.jpg" alt="Location of rainydays shop">
+          <p class="address__text"><i class="fa-solid fa-location-dot"></i> Grey Wedels Plass 5, 0151 Oslo</p>
+          <p class="address__text"><i class="fa-solid fa-phone"></i>+47 783 83 88</p>
+        </div>
+
+        <section class="form__container" id="formContainer">
+          <form id="form-contact" method="GET">
+            <div class="contact__container">
+              <h2>Contact Our Team</h2>
+              <div class="input-control">
+                <label for="full-name">Full name</label>
+                <input id="full-name" name="full-name" type="text" inputmode="text" enterkeyhint="next" autocomplete="on" placeholder="First and Last" required minlength="2" >
+              </div>
+              <div class="input-control">
+                <label for="email-contact">Email</label>
+                <input id="email-contact" name="email-contact" type="text" placeholder="addmail@gmail.com" required required minlength="9" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+              </div>
+              <div class="input-control">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" cols="230" row="3" placeholder="How may we be of help?" required minlength="10"></textarea>
+              </div>
+              <button type="submit" class="cta-send">Send in</button>
             </div>
-            <input type="submit" value="Send in" class="cta-send">
           </form>
       </section>
+
+
     </section>
   </main>
 
@@ -85,7 +98,7 @@
 
   <footer> 
     <a href="index.html" class="footer-logo">
-      <img src="/pictures/Logo-white.png" alt="Logo of the website">
+      <img src="/pictures/Logo-white.png" alt="Logo of the website" class="footer-logo">
     </a>
     <nav class="footer-nav">
       <ul>

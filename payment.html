@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>RAINYDAYS | Checkout Successful</title>
-  <meta name="description" content="Your jacket is on the way to you, Thank you for purchase">
+  <title>RAINYDAYS | Checkout</title>
+  <meta name="description" content="You are just one step away from ordering that warm jacket that you always wanted">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&family=Montserrat:wght@100&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/fontawesome-free-6.3.0-web/css/all.css">
   <script defer src="js/ui/hotjar.js"></script>
+  <script defer src="/js/helper/validateEmail.js"></script>
 </head>
 
 
@@ -40,42 +41,62 @@
         </nav>
         <!-- Some Icons from Font Awesome and other websites did not work for some reason, had to use img from Figma, wrote description for blind people to understand the images -->
         <div class="icons">
-          <a href="#"><i class="fa-solid fa-user"><span class="span__empty">!!!Deleted!!!</span></i></a>
-          <a href="bag.html"><i class="fa-solid fa-bag-shopping" id="bagIcon"><span class="span__empty">!!!Deleted!!!</span></i></a>
+          <a href="#"><i class="fa-solid fa-user"></i><span class="span__empty">!!!Deleted!!!</span></a>
+          <a href="bag.html"><i class="fa-solid fa-bag-shopping" id="bagIcon"></i><span class="span__empty">!!!Deleted!!!</span></a>
           <a href="#"><i class="fa-solid fa-magnifying-glass"></i><span class="span__empty">!!!Deleted!!!</span></a>
         </div>
       </section>
   </header>
 
-
-  <main class="main-inactive">
-    <div class="success-line-top"></div>
-    <section class="success">
-      <div class="success__circle"></div>
-      <div class="success__content">
-        <h1 class="thanks">Thank you for your purchase </h1>
-        <p>You will receive an email confirming your purchase </p>
-        <p>Your order # is D128720</p>
+  <main>
+    <section>
+      <div class="breadcrumbs__container">
+        <ul>
+          <li class="breadcrumbs-house"><a href="/"><i class="fa-solid fa-house"></i><span class="span__empty">!!!Deleted!!!</span></a></li>
+          <li><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="details.html">Details Page</a></li>
+          <li><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="bag.html">Your Bag</a></li>
+          <li><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="bag.html">Payment</a></li>
+        </ul>
       </div>
     </section>
-    <div class="success-line-top"></div>
-      <section class="finished-order">
-        <img src="/pictures/RainyDays_Jacket4.png" alt="Black biker jacket">
-        <table>
-          <tr>
-            <th class="table__title">Product</th>
-            <th class="table__title">Model</th>
-            <th class="table__title">Quantity</th>
-          </tr>
-          <tr>
-            <th class="table__content">Jacket-man</th>
-            <th class="table__content">Black biker edition 2021 & Sea life Marine</th>
-            <th class="table__content">1</th>
-          </tr>
-        </table>
-      </section>
-      <p id="success-button"><a href="list-of-jackets.html" class="cta-continue-back">Continue Shopping</a></p>
-      <div class="line"></div>
+
+    <section class="form__container">
+        <form id="form" method="GET">
+          <div class="payment__container">
+            <h1>Payment</h1>
+            <div class="form-names">
+              <div class="input-control">
+                <label for="card-holder-name">Name</label>
+                <input id="card-holder-name" name="card-holder-name" type="text"placeholder="First" enterkeyhint="next" autocomplete="on" required minlength="2">
+              </div>
+              <div class="input-control">
+                <label for="card-holder-last-name"><span class="span__empty">!!!Deleted!!!</span></label>
+                <input id="card-holder-last-name" name="card-holder-last-name" type="text" placeholder="Last" enterkeyhint="next" autocomplete="on" required minlength="2">
+              </div>
+            </div>
+            <div class="input-control">
+              <label for="card-number">Card number</label>
+              <input id="card-number" name="card-number" type="card-number" placeholder="1234 5678 9123 4567" enterkeyhint="next" autocomplete="on" required minlength="16" type="number" min="0" maxlength="16">
+            </div>
+            <div class="form-names">
+              <div class="input-control">
+                <label for="exp-date">Expiry date</label>
+                <input id="exp-date" name="exp-date" type="text" placeholder="01/25" enterkeyhint="next" autocomplete="on" required minlength="4" type="number" maxlength="4">
+              </div>
+              <div class="input-control">
+                <label for="cvc">CVC</label>
+                <input id="cvc" name="cvc" type="text" placeholder="***" enterkeyhint="next" autocomplete="on" required maxlength="3" minlength="3" type="number">
+              </div>
+            </div>
+            <a href="checkous-success.html" class="cta-continue">Finish Ordering</a>
+          </div>
+        </form>
+    </section>
   </main>
 
   <footer> 
@@ -100,5 +121,3 @@
   </footer>
 </body>
 </html>
-
-

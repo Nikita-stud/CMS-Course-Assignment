@@ -692,6 +692,10 @@ input::placeholder{
   padding-left: 10px;
 }
 
+.checkout-img{
+  max-width: 300px;
+}
+
 
 /*----- Payment Page -----*/
 .payment__container{
@@ -1149,6 +1153,11 @@ input::placeholder{
   .bag-main-flex > *{
     flex: 1;
   }
+
+  .bag-img{
+    position: absolute;
+    left: -10px;
+  }
   /* -----Jackets Special Page----- */
   .popup p{
     font-size: 1.2rem;
@@ -1407,6 +1416,9 @@ input::placeholder{
   max-height: 660px;
 }
 .bag__content{
+  float: right;
+  height: 300px;
+  width: 400px;
   border: 1px solid var(--black-text);
   border-left: 0px;
   border-right: 0px;

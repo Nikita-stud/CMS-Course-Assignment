@@ -221,6 +221,19 @@ header label{
 .horizontal-jackets__container:hover{
   transform: scale(1.028);
 }
+.horizontal-jackets__container-list-page{
+  transition: all .2s ease-in-out;
+  margin-top: 10px;
+  max-width: 242px;
+  min-height: 460px;
+  height: auto;
+  border: solid var(--grey);
+  border-width: 0.5px 0.5px 0px 0.5px;
+  border-radius: 2px;
+  overflow: none;
+  position: relative;
+}
+
 .jackets__container{
   width: 100%;
   min-width: 240px;
@@ -229,21 +242,22 @@ header label{
   flex-direction: row;
   gap: 40px;
 }
-
 .jacket-img{
   width: 240px;
   height: 243px;
 }
 .jackets-title{
-  font-size: var(--jacket-title-size);
+  font-size: 1.5rem;
   text-align: center;
   font-weight: bold;
 }
 .jackets-text{
-  font-size: var(--jacket-text-size);
-  text-align: center;
-  padding: 0 5px;
+  margin-bottom: -15px;
 }
+.jackets__container p {
+  padding: 10px 5px 0 15px;
+}
+
 .circles{
   display: flex;
   flex-direction: row;
@@ -260,7 +274,7 @@ header label{
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-top: 5px;
 }
 .jackets-discount-price{
   color: rgb(212, 22, 22);
@@ -1207,6 +1221,20 @@ input::placeholder{
   .tlf-main-text{
     display: none;
   }
+
+
+  .jackets-text{
+    margin-bottom: -15px;
+  }
+  .jackets__container p{
+    font-size: 1.1rem;
+    padding: 10px 5px 0 15px;
+  }
+  .jackets-price{
+    font-size: 1.3rem;
+    margin-top: -10px;
+  }
+
   .home-text {
     box-shadow: 0px 4px 8px rgba(0,0,0,0.15), -10px -10px 13px -13px rgba(112, 124, 140, 0.7);
   }

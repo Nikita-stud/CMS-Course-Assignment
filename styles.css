@@ -1047,6 +1047,13 @@ input::placeholder{
     gap: 20px;
     justify-content: space-around;
   }
+  .list-page{
+    font-size: 1rem;
+  }
+  .list-page p{
+    margin-top: 15px;
+    padding: 0 5px 0 20px;
+  }
   /* ----------------------------Details Page---------------------------- */
   .details__container{
     flex-direction: column-reverse;
@@ -1354,7 +1361,11 @@ input::placeholder{
   gap: 20px;
   justify-content: space-between;
 }
-
+.list-page p{
+  font-size: 1.1rem;
+  margin-top: 15px;
+  padding: 0 5px 0 20px;
+}
 /*----- Jackets Special Page -----*/
 .popup{
   display: flex;

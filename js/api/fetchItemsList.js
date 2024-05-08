@@ -17,7 +17,7 @@ export function fetchItemsList(items){
     }
 
     container.innerHTML += `<div id="horizontal-jackets__container" class="horizontal-jackets__container-list-page">
-                            <div id="jackets-text__container" class="jackets-text__container">
+                            <div id="jackets-text__container" class="jackets-text__container list-page">
                               <a href="details.html?id=${item.id}">
                                 <img src="${item.images[0].src}" class="jacket-img" alt="${item.images[0].alt}">
                                 <h3 id="jackets-title" class="jackets-title">${item.name}</h3>
